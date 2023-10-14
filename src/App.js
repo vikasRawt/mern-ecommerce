@@ -4,12 +4,14 @@ import './App.css';
 import Home from './pages/Home';
 import LoginPage from './pages/LoginPage';
 import SignUpPage from './pages/SignUpPage';
-import { Cart } from './features/cart/Cart';
+import ProductDetailPage from './pages/productDetailPage';
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
 import "./index.css";
+import CartPage from './pages/CartPage';
+import CheckOut from './pages/CheckOut';
 
 const router = createBrowserRouter([
   {
@@ -26,7 +28,15 @@ const router = createBrowserRouter([
   },
   {
     path: "/cart",
-    element:<Cart></Cart>,
+    element:<CartPage></CartPage>,
+  },
+  {
+    path: "/checkout",
+    element:<CheckOut></CheckOut>,
+  },
+  {
+    path: "/pdetail",
+    element:<ProductDetailPage></ProductDetailPage>,
   },
 ]);
 
